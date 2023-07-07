@@ -206,11 +206,20 @@ var manav = meyveler.concat(sebzeler);
         (.toUpperCase ve .toLowerCase metotlarıı kullanabilirsiniz.)
 			4. elde edilen string döndürülecek
  */
+//let smthg in ifadesi, bir döngü aracılığıyla bir nesnenin anahtarlarını (key'leri) elde etmek için kullanılan bir yapıdır.
 
-function emojileriDonustur(/* kodlar buraya */) {
-  /* kodlar buraya */
+//Bu yapı, in anahtar kelimesiyle birlikte kullanıldığında, bir dizi veya nesnenin her bir elemanını döngü içinde temsil eden bir değişken oluşturur.
+function emojileriDonustur(mesaj, emojiler) {
+  for (let sembol in emojiler) {
+    const emoji = emojiler[sembol];
+    const kucukSembol = sembol.toLowerCase();
+    const buyukSembol = sembol.toUpperCase();
+
+    mesaj = mesaj.split(buyukSembol).join(emoji);
+    mesaj = mesaj.split(kucukSembol).join(emoji);
+  }
+  return mesaj;
 }
-
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 function sa() {
   console.log("Kodlar çalışıyor");
