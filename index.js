@@ -138,6 +138,7 @@ function cumlelereDonustur(dizi, ayirac) {
 }
 var sonuc1 = cumlelereDonustur(cumleler, " ");
 console.log(sonuc1);
+
 /* GÖREV 2:
 		paragrafOlustur fonksiyonuna aşağıdakileri uygulayın.
 			1. cumleler dizisi fonksiyonun birinci parametresi olarak alınacak
@@ -150,10 +151,19 @@ console.log(sonuc1);
          callback(dizi[1],dizi[2],dizi[3],dizi[5],dizi[7])
 			6. Oluşturulan paragraf döndürülecek
 	*/
-
-function paragrafOlustur(/* kodlar buraya */) {
-  /* kodlar buraya */
+function paragrafOlustur(cumleler, cumleKur, cumlelereDonustur) {
+  const cumlelerDizi = cumlelereDonustur(cumleler, " ");
+  const paragraf = cumleKur(
+    cumlelerDizi[1],
+    cumlelerDizi[3],
+    cumlelerDizi[5],
+    cumlelerDizi[7],
+    cumlelerDizi[9]
+  );
+  return paragraf;
 }
+const paragraf = paragrafOlustur(cumleler, cumleKur, cumlelereDonustur);
+console.log(paragraf);
 
 /* 	GÖREV 3:
 		Yukarıda isimleri sebzeler ve meyveler olan 2 dizi bulunmaktadır. Bu dizileri kullanarak aşağıdaki görevleri tamamlayın.
